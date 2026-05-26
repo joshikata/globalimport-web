@@ -1,87 +1,84 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
+    <title>Global Import - Servicios Profesionales</title>
     <link rel="stylesheet" href="styles.css">
-</head><body>
+</head>
+<body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo-container">
-            <img src="assets/logosinfondo.png" class="logo" alt="Logo">
+    <nav>
+        <div class="logo">
+            <img src="assets/logosinfondo.png" alt="Logo">
         </div>
         <ul class="nav-links">
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Acerca de</a></li>
             <li><a href="#services">Servicios</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#about">Acerca de</a></li>
+            <li><a href="registro.html">Contacto</a></li>
         </ul>
     </nav>
-    <!-- Hero Section -->
+    <!-- Sección Hero -->
     <section class="hero" id="home">
-        <div class="container">
-            <h1>Bienvenido a Mi Sitio Web</h1>
-            <p>Tu solución para todo lo que necesitas</p>
-            <a href="#services" class="btn">Nuestros Servicios</a>
-        </div>
+        <h1>Bienvenido a Global Import</h1>
+        <p>Descubre nuestros servicios y productos de calidad</p>
+        <a href="#services" class="btn">Explorar Servicios</a>
     </section>
-    <!-- Cards Section -->
-    <section class="cards">
+    <!-- Sección de Cards -->
+    <section class="cards" id="services">
         <div class="card">
-            <img src="card1.jpg" alt="Illustration for the first service card displayed in the cards section">
-            <div class="card-content">
-                <h3>Card 1</h3>
-                <p>Descripción de la tarjeta 1</p>
-            </div>
+            <img src="assets/imagen1.jpg" alt="Servicio 1">
+            <h3>Servicio Premium</h3>
+            <p>Soluciones de importación de alta calidad con garantía y asesoría profesional.</p>
         </div>
         <div class="card">
-            <img src="card2.jpg" alt="Illustration for the second service card displayed in the cards section">
-            <div class="card-content">
-                <h3>Card 2</h3>
-                <p>Descripción de la tarjeta 2</p>
-            </div>
+            <img src="assets/imagen2.jpg" alt="Servicio 2">
+            <h3>Logística Integral</h3>
+            <p>Transporte y entrega rápida garantizada con seguimiento en tiempo real.</p>
         </div>
         <div class="card">
-            <img src="card3.jpg" alt="Illustration for the third service card displayed in the cards section">
-            <div class="card-content">
-                <h3>Card 3</h3>
-                <p>Descripción de la tarjeta 3</p>
-            </div>
+            <img src="assets/imagen3.jpg" alt="Servicio 3">
+            <h3>Asesoría Personalizada</h3>
+            <p>Equipo experto disponible para orientarte en todas tus necesidades.</p>
         </div>
     </section>
-    <!-- Testimonios -->
-    <section class="testimonials">
-        <div class="testimonial">
-        <button class="next">Next</button>
-    </section>
-    <!-- Testimonios -->
-    <section class="testimonials">
-        <div class="testimonial">
-            <p>"Excelente servicio, muy recomendado!"</p>
-            <h4>- Juan Pérez</h4>
+    <!-- Sección de Reseñas -->
+    <section class="reviews" id="about">
+        <h2>Qué dicen nuestros clientes</h2>
+        <div class="review">
+            <p>"Excelente servicio y productos de calidad. Muy recomendado para negocios serios."</p>
+            <cite>- Cliente 1, Empresario</cite>
         </div>
-        <div class="testimonial">
-            <p>"Me encantó la experiencia, volveré pronto."</p>
-            <h4>- María López</h4>
+        <div class="review">
+            <p>"Muy satisfecho con el trato, la eficiencia y el resultado obtenido. Seguiré usando sus servicios."</p>
+            <cite>- Cliente 2, Comerciante</cite>
         </div>
-        <div class="testimonial">
-            <p>"Profesionales y atentos, 100% satisfecho."</p>
-            <h4>- Carlos García</h4>
+        <div class="review">
+            <p>"Profesionales de verdad. Cumplieron con todos los plazos y la calidad fue impecable."</p>
+            <cite>- Cliente 3, Importador</cite>
         </div>
     </section>
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
-            <ul class="social-links">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
+    <footer id="contact">
+        <div class="contact-info">
+            <h3>Contacto</h3>
+            <p>Email: info@globalimport.com</p>
+            <p>Teléfono: +54 11 1234-5678</p>
+            <p>Dirección: Buenos Aires, Argentina</p>
+        </div>
+        <div class="social-media">
+            <h3>Redes Sociales</h3>
+            <a href="https://facebook.com/globalimport" target="_blank">📘 Facebook</a>
+            <a href="https://twitter.com/globalimport" target="_blank">𝕏 Twitter</a>
+            <a href="https://instagram.com/globalimport" target="_blank">📷 Instagram</a>
+        </div>
+        <div class="legal">
+            <h3>Legal</h3>
+            <p>&copy; 2026 Global Import. Todos los derechos reservados.</p>
+            <p>Términos y condiciones</p>
         </div>
     </footer>
-    <script src="script.js"></script>
-</body> 
+</body>
 </html>

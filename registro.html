@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Global Import</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="page-header">
+            <div>
+                <p class="eyebrow">Formulario de registro</p>
+                <h1>Cuentanos más sobre ti</h1>
+                <p class="subtitle">Completa los datos para poder contactarte.</p>
+            </div>
+        </header>
+
+        <form class="registro-form" action="#" method="post">
+            <section class="form-section">
+                <h2>Datos personales</h2>
+                <div class="field-grid">
+                    <label class="field-group">
+                        <span>Nombre completo <strong>*</strong></span>
+                        <input type="text" name="nombre" placeholder="Juan Pérez" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Fecha de nacimiento <strong>*</strong></span>
+                        <input type="date" name="fecha_nacimiento" required>
+                    </label>
+                    <label class="field-group">
+                        <span>RUT <strong>*</strong></span>
+                        <input type="text" name="rut" placeholder="12.345.678-9" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Género</span>
+                        <select name="genero">
+                            <option value="">Selecciona...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="no_binario">No binario</option>
+                            <option value="prefiero_no_decir">Prefiero no decir</option>
+                        </select>
+                    </label>
+                    <label class="field-group field-fullwidth">
+                        <span>Nacionalidad <strong>*</strong></span>
+                        <select name="nacionalidad" required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="peru">Perú</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="mexico">México</option>
+                            <option value="espana">España</option>
+                            <option value="estados_unidos">Estados Unidos</option>
+                            <option value="brasil">Brasil</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Datos de acceso</h2>
+                <div class="field-grid">
+                    <label class="field-group">
+                        <span>Correo electrónico <strong>*</strong></span>
+                        <input type="email" name="correo" placeholder="correo@ejemplo.com" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Confirmar correo <strong>*</strong></span>
+                        <input type="email" name="correo_confirm" placeholder="correo@ejemplo.com" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Contraseña <strong>*</strong></span>
+                        <input id="password" type="password" name="password" placeholder="Crea una contraseña segura" required>
+                        <div class="password-strength" aria-live="polite">
+                            <span class="strength-label">Fuerza: <strong id="strength-text">Débil</strong></span>
+                            <div class="strength-meter">
+                                <span id="strength-bar"></span>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="field-group">
+                        <span>Confirmar contraseña <strong>*</strong></span>
+                        <input type="password" name="password_confirm" placeholder="Repite tu contraseña" required>
+                    </label>
+                    <label class="field-group field-fullwidth">
+                        <span>Teléfono <strong>*</strong></span>
+                        <input type="tel" name="telefono" placeholder="+56 9 1234 5678" pattern="\+?\d[\d\s]{7,}" required>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Dirección</h2>
+                <div class="field-grid">
+                    <label class="field-group">
+                        <span>País <strong>*</strong></span>
+                        <select name="pais" required>
+                            <option value="">Selecciona país</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="peru">Perú</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="mexico">México</option>
+                            <option value="espana">España</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="estados_unidos">Estados Unidos</option>
+                        </select>
+                    </label>
+                    <label class="field-group">
+                        <span>Provincia / Estado <strong>*</strong></span>
+                        <input type="text" name="provincia" placeholder="Ej: Santiago" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Ciudad <strong>*</strong></span>
+                        <input type="text" name="ciudad" placeholder="Ej: Providencia" required>
+                    </label>
+                    <label class="field-group field-fullwidth">
+                        <span>Calle y número <strong>*</strong></span>
+                        <input type="text" name="calle_numero" placeholder="Ej: Av. Libertador 1234" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Código postal <strong>*</strong></span>
+                        <input type="text" name="codigo_postal" placeholder="Ej: 8320000" required>
+                    </label>
+                    <label class="field-group">
+                        <span>Piso / Departamento</span>
+                        <input type="text" name="piso_depto" placeholder="Ej: Piso 4 / Depto 403">
+                    </label>
+                    <label class="field-group field-fullwidth">
+                        <span>Referencia o instrucciones</span>
+                        <textarea name="referencia" rows="4" maxlength="200" placeholder="Agrega una referencia o instrucciones adicionales (máx. 200 caracteres)"></textarea>
+                        <small class="help-text">Máximo 200 caracteres.</small>
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Preferencias y permisos</h2>
+                <div class="field-grid field-grid--columns">
+                    <fieldset class="field-card">
+                        <legend>Categorías de interés</legend>
+                        <label><input type="checkbox" name="categorias" value="importacion"> Importación</label>
+                        <label><input type="checkbox" name="categorias" value="logistica"> Logística</label>
+                        <label><input type="checkbox" name="categorias" value="asesoria"> Asesoría</label>
+                        <label><input type="checkbox" name="categorias" value="comercio"> Comercio Exterior</label>
+                    </fieldset>
+
+                    <fieldset class="field-card">
+                        <legend>Tipo de cliente</legend>
+                        <label><input type="radio" name="tipo_cliente" value="empresa" required> Empresa</label>
+                        <label><input type="radio" name="tipo_cliente" value="particular"> Particular</label>
+                        <label><input type="radio" name="tipo_cliente" value="revendedor"> Revendedor</label>
+                    </fieldset>
+
+                    <label class="field-group field-fullwidth">
+                        <span>¿Cómo nos conociste?</span>
+                        <select name="como_conociste">
+                            <option value="">Selecciona una opción</option>
+                            <option value="busqueda_web">Búsqueda en web</option>
+                            <option value="redes_sociales">Redes sociales</option>
+                            <option value="recomendacion">Recomendación</option>
+                            <option value="rss">RSS</option>
+                            <option value="newsletter">Newsletter</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </label>
+
+                    <label class="field-group checkbox-inline">
+                        <input type="checkbox" name="suscripcion_email" value="si">
+                        <span>Quiero suscripción por email</span>
+                    </label>
+
+                    <label class="field-group checkbox-inline">
+                        <input type="checkbox" name="acepto_terminos" required>
+                        <span>Acepto los <a href="#" target="_blank">términos y condiciones</a> <strong>*</strong></span>
+                    </label>
+
+                    <label class="field-group checkbox-inline">
+                        <input type="checkbox" name="acepto_privacidad" required>
+                        <span>Acepto la <a href="#" target="_blank">política de privacidad</a> <strong>*</strong></span>
+                    </label>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Enviar registro</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const strengthBar = document.getElementById('strength-bar');
+        const strengthText = document.getElementById('strength-text');
+
+        function evaluatePassword(value) {
+            let score = 0;
+            const patterns = [
+                /[a-z]/,
+                /[A-Z]/,
+                /[0-9]/,
+                /[^A-Za-z0-9]/,
+                /.{8,}/
+            ];
+            patterns.forEach((pattern) => {
+                if (pattern.test(value)) score += 1;
+            });
+            return score;
+        }
+
+        function updateStrengthMeter() {
+            const value = passwordInput.value;
+            const score = evaluatePassword(value);
+            const width = (score / 5) * 100;
+            strengthBar.style.width = width + '%';
+
+            if (score <= 2) {
+                strengthBar.className = 'weak';
+                strengthText.textContent = 'Débil';
+            } else if (score === 3 || score === 4) {
+                strengthBar.className = 'medium';
+                strengthText.textContent = 'Aceptable';
+            } else {
+                strengthBar.className = 'strong';
+                strengthText.textContent = 'Fuerte';
+            }
+        }
+
+        passwordInput.addEventListener('input', updateStrengthMeter);
+    </script>
+</body>
+</html>
