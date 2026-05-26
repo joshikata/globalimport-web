@@ -23,14 +23,17 @@
                     <label class="field-group">
                         <span>Nombre completo <strong>*</strong></span>
                         <input type="text" name="nombre" placeholder="Juan Pérez" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Fecha de nacimiento <strong>*</strong></span>
                         <input type="date" name="fecha_nacimiento" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>RUT <strong>*</strong></span>
                         <input type="text" name="rut" placeholder="12.345.678-9" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Género</span>
@@ -41,6 +44,7 @@
                             <option value="no_binario">No binario</option>
                             <option value="prefiero_no_decir">Prefiero no decir</option>
                         </select>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group field-fullwidth">
                         <span>Nacionalidad <strong>*</strong></span>
@@ -55,6 +59,7 @@
                             <option value="estados_unidos">Estados Unidos</option>
                             <option value="brasil">Brasil</option>
                         </select>
+                        <span class="error-message"></span>
                     </label>
                 </div>
             </section>
@@ -65,14 +70,17 @@
                     <label class="field-group">
                         <span>Correo electrónico <strong>*</strong></span>
                         <input type="email" name="correo" placeholder="correo@ejemplo.com" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Confirmar correo <strong>*</strong></span>
                         <input type="email" name="correo_confirm" placeholder="correo@ejemplo.com" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Contraseña <strong>*</strong></span>
                         <input id="password" type="password" name="password" placeholder="Crea una contraseña segura" required>
+                        <span class="error-message"></span>
                         <div class="password-strength" aria-live="polite">
                             <span class="strength-label">Fuerza: <strong id="strength-text">Débil</strong></span>
                             <div class="strength-meter">
@@ -83,10 +91,12 @@
                     <label class="field-group">
                         <span>Confirmar contraseña <strong>*</strong></span>
                         <input type="password" name="password_confirm" placeholder="Repite tu contraseña" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group field-fullwidth">
                         <span>Teléfono <strong>*</strong></span>
                         <input type="tel" name="telefono" placeholder="+56 9 1234 5678" pattern="\+?\d[\d\s]{7,}" required>
+                        <span class="error-message"></span>
                     </label>
                 </div>
             </section>
@@ -107,22 +117,27 @@
                             <option value="brasil">Brasil</option>
                             <option value="estados_unidos">Estados Unidos</option>
                         </select>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Provincia / Estado <strong>*</strong></span>
                         <input type="text" name="provincia" placeholder="Ej: Santiago" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Ciudad <strong>*</strong></span>
                         <input type="text" name="ciudad" placeholder="Ej: Providencia" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group field-fullwidth">
                         <span>Calle y número <strong>*</strong></span>
                         <input type="text" name="calle_numero" placeholder="Ej: Av. Libertador 1234" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Código postal <strong>*</strong></span>
                         <input type="text" name="codigo_postal" placeholder="Ej: 8320000" required>
+                        <span class="error-message"></span>
                     </label>
                     <label class="field-group">
                         <span>Piso / Departamento</span>
@@ -131,7 +146,8 @@
                     <label class="field-group field-fullwidth">
                         <span>Referencia o instrucciones</span>
                         <textarea name="referencia" rows="4" maxlength="200" placeholder="Agrega una referencia o instrucciones adicionales (máx. 200 caracteres)"></textarea>
-                        <small class="help-text">Máximo 200 caracteres.</small>
+                        <small class="help-text"><span id="char-count">0</span>/200 caracteres.</small>
+                        <span class="error-message"></span>
                     </label>
                 </div>
             </section>
@@ -145,6 +161,7 @@
                         <label><input type="checkbox" name="categorias" value="logistica"> Logística</label>
                         <label><input type="checkbox" name="categorias" value="asesoria"> Asesoría</label>
                         <label><input type="checkbox" name="categorias" value="comercio"> Comercio Exterior</label>
+                        <span class="error-message" style="display: block;"></span>
                     </fieldset>
 
                     <fieldset class="field-card">
@@ -152,6 +169,7 @@
                         <label><input type="radio" name="tipo_cliente" value="empresa" required> Empresa</label>
                         <label><input type="radio" name="tipo_cliente" value="particular"> Particular</label>
                         <label><input type="radio" name="tipo_cliente" value="revendedor"> Revendedor</label>
+                        <span class="error-message" style="display: block;"></span>
                     </fieldset>
 
                     <label class="field-group field-fullwidth">
@@ -175,11 +193,13 @@
                     <label class="field-group checkbox-inline">
                         <input type="checkbox" name="acepto_terminos" required>
                         <span>Acepto los <a href="#" target="_blank">términos y condiciones</a> <strong>*</strong></span>
+                        <span class="error-message" style="display: block; margin-top: 0.5rem;"></span>
                     </label>
 
                     <label class="field-group checkbox-inline">
                         <input type="checkbox" name="acepto_privacidad" required>
                         <span>Acepto la <a href="#" target="_blank">política de privacidad</a> <strong>*</strong></span>
+                        <span class="error-message" style="display: block; margin-top: 0.5rem;"></span>
                     </label>
                 </div>
             </section>
@@ -188,6 +208,17 @@
                 <button type="submit" class="btn-primary">Enviar registro</button>
             </div>
         </form>
+
+        <!-- Pantalla de éxito -->
+        <div class="success-screen" id="successScreen">
+            <div class="success-content">
+                <div class="success-icon">✓</div>
+                <h2>¡Registro Exitoso!</h2>
+                <p class="success-message">Bienvenido, <span id="userName"></span></p>
+                <p>Tu registro ha sido completado satisfactoriamente. Pronto recibirás un correo de confirmación.</p>
+                <button type="button" class="btn-primary" onclick="window.location.href='index.html'">Volver al Inicio</button>
+            </div>
+        </div>
     </main>
 
     <script>
@@ -230,5 +261,7 @@
 
         passwordInput.addEventListener('input', updateStrengthMeter);
     </script>
+    
+    <script src="validaciones.js"></script>
 </body>
 </html>

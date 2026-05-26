@@ -183,6 +183,16 @@ textarea {
     border: 1px solid rgba(209, 213, 219, 0.9);
 }
 
+.field-card.campo-error {
+    border-color: #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.05);
+}
+
+.field-card.campo-ok {
+    border-color: var(--color-success) !important;
+    background-color: rgba(22, 163, 74, 0.05);
+}
+
 .field-card legend {
     font-size: 1rem;
     padding-bottom: 0.25rem;
@@ -270,6 +280,134 @@ button.btn-primary:hover {
     display: flex;
     justify-content: flex-end;
     margin-top: var(--spacing-xl);
+}
+
+/* Estilos para validación - Error y Éxito */
+.campo-error input,
+.campo-error select,
+.campo-error textarea {
+    border-color: #dc2626 !important;
+    background-color: rgba(220, 38, 38, 0.05);
+}
+
+.campo-error input:focus,
+.campo-error select:focus,
+.campo-error textarea:focus {
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+}
+
+.campo-ok input,
+.campo-ok select,
+.campo-ok textarea {
+    border-color: var(--color-success) !important;
+    background-color: rgba(22, 163, 74, 0.05);
+}
+
+.campo-ok input:focus,
+.campo-ok select:focus,
+.campo-ok textarea:focus {
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.12);
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: none;
+    font-weight: 500;
+}
+
+.campo-error .error-message {
+    display: block;
+}
+
+/* Pantalla de éxito */
+.success-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(245, 158, 11, 0.95));
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.success-screen.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.success-content {
+    background: white;
+    border-radius: var(--radius);
+    padding: var(--spacing-xl);
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.success-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+    animation: scaleIn 0.5s ease 0.2s both;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.success-content p {
+    color: var(--color-muted);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+.success-message {
+    color: var(--color-success);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.success-content .btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
 }
 
 @media (max-width: 900px) {
